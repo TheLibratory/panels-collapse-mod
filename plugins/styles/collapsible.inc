@@ -81,8 +81,6 @@ function theme_panels_style_collapsible_render_pane($vars) {
   $pane = $vars['pane'];
   $display = $vars['display'];
   $settings = $vars['settings'];
-  
-  dsm($content);
 
   if (empty($content->content)) {
     return;
