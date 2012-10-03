@@ -67,7 +67,8 @@ function theme_panels_style_collapsible_render_region($vars) {
   if (empty($settings['region_collapsed'])) {
     $settings['region_collapsed'] = FALSE;
   }
-  $output = theme('panels_style_collapsible', array('handle' => check_plain($settings['region_title']), 'content' => $content, 'collapsed' => $settings['region_collapsed']));
+  $title = ctools_context_keyword_substitute($settings['region_title'], array(), $vars['display']->context);
+  $output = theme('panels_style_collapsible', array('handle' => $title, 'content' => $content, 'collapsed' => $settings['region_collapsed']));
   return $output;
 }
 
@@ -119,7 +120,7 @@ function theme_panels_style_collapsible($vars) {
 
   $class = $vars['collapsed'] ? ' ctools-collapsed' : '';
   $output = '<div class="ctools-collapsible-container' . $class . '">';
-  $output .= '<h2 class="pane-title ctools-collapsible-handle">' . $vars['handle'] . '</h2>';
+  $output .= '<h2 class="pane-title ctools-collapsible-handle">' . check_plain($vars['handle']) . '</h2>';
   $output .= '<div class="ctools-collapsible-content">' . $vars['content'] . '</div>';
   $output .= '</div>';
 
