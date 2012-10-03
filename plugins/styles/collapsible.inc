@@ -126,7 +126,6 @@ function theme_panels_style_collapsible($vars) {
   }
     
   $class = $vars['collapsed'] ? ' ctools-collapsed' : '';
-  $output = '<div class="ctools-collapsible-container' . $class . '">';
   $output = '<div' . $pane_id . ' class="ctools-collapsible-container' . $class . $pane_css . '">';
   $output .= '<h2 class="pane-title ctools-collapsible-handle">' . check_plain($vars['handle']) . '</h2>';
   $output .= '<div class="ctools-collapsible-content">' . $vars['content'] . '</div>';
