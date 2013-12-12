@@ -1,0 +1,1 @@
+This is a modified version of https://drupal.org/project/panels_style_collapsible, modified to fix the bug detailed in https://drupal.org/node/2155455.  It is hosted here as a backup for our in-house usage.
